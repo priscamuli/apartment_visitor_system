@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Visitor List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Apartment Number</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+            <th>Added by</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for visitor in visitors %}
+        <tr>
+            <td>{{ visitor.name }}</td>
+            <td>{{ visitor.apartment_number }}</td>
+            <td>{{ visitor.check_in }}</td>
+            <td>{{ visitor.check_out|default:"-" }}</td>
+            <td>{{ visitor.added_by }}</td>
+            <td>
+                <a href="{% url 'visitor_update' visitor.pk %}">Edit</a> |
+                <a href="{% url 'visitor_delete' visitor.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

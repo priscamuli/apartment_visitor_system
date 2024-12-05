@@ -1,0 +1,135 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: url('../images/background.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+form {
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 50vh; /* Full viewport height */
+    margin: 0 auto;
+}
+
+/* Full page background */
+.login-page {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centered login container */
+.login-container {
+    background-color: rgba(200, 200, 200, 0.8);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form and button styles */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-container .btn:hover {
+    background-color: #0056b3;
+}
+
+header {
+    background-color: #333;
+    color: blue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: aqua;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    background-color: rgba(20, 120, 120, 0.8); /* Add some contrast for readability */
+    border-radius: 8px; /* Rounded corners for the content area */
+    margin: 1rem auto;
+    max-width: 80%; /* Center and limit the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+    color:black;
+}
+
+table th {
+    background-color: #f4f4f4;
+    color:blueviolet;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: right;
+    }
+
+    th::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
