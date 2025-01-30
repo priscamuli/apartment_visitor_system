@@ -103,7 +103,7 @@ def visitor_delete(request,pk):
     visitor = get_object_or_404(Visitor, pk=pk)
     if request.method == 'POST':
         visitor.delete()
-        return request('dashboard')
+        return redirect('dashboard')
     return render(request,'delete_confirmation.html', {'visitor': visitor})
 
 
