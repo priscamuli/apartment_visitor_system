@@ -2,8 +2,6 @@ from django.conf.urls.i18n import urlpatterns
 from django.http import HttpResponse
 from django.urls import path
 from . import views
-def favicon_view(request):
-    return HttpResponse(status=204)
 urlpatterns = [
     path('login/',views.user_login, name='login'),
     path('logout/',views.user_logout, name='logout'),
@@ -15,5 +13,4 @@ urlpatterns = [
     path('register/resident/', views.resident_register, name='resident_register'),
     path('register/receptionist/', views.receptionist_register, name='receptionist_register'),
 
-    path('favicon.ico', favicon_view),
 ]
