@@ -10,8 +10,7 @@ from .forms import VisitorForm
 from django.contrib import messages
 from django.http import HttpResponse
 
-def favicon_view(request):
-    return HttpResponse(status=204)
+
 
 def is_receptionist(user):
     return user.groups.filter(name='Receptionist').exists()
