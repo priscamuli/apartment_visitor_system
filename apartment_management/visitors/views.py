@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from .forms import ResidentRegisterForm, ReceptionistRegisterForm
@@ -7,6 +8,10 @@ from django.contrib.auth import  login, logout, authenticate
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .forms import VisitorForm
 from django.contrib import messages
+from django.http import HttpResponse
+
+def favicon_view(request):
+    return HttpResponse(status=204)
 
 def is_receptionist(user):
     return user.groups.filter(name='Receptionist').exists()

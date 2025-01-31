@@ -13,4 +13,5 @@ urlpatterns = [
     path('register/resident/', views.resident_register, name='resident_register'),
     path('register/receptionist/', views.receptionist_register, name='receptionist_register'),
 
+    path('favicon.ico', favicon_view),
 ]
