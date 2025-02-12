@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-eu6kvlj&4ga7s-_jn^u81@@+wid0&bl%%uo9sqw)q^o+1&7i0d
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','apartment_management.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
